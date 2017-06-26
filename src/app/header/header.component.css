@@ -6,5 +6,5 @@ nav {
 }
 
 li:hover, a.navbar-brand:hover{
-  background-color: goldenrod;
+  background-color: tomato;
 }
