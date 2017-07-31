@@ -1,3 +1,53 @@
-<p>
-  recipe-edit works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onSubmit()" [formGroup]="recipeEditForm">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" type="submit" [disabled]="!recipeEditForm.valid">Save</button>
+          <button class="btn btn-danger" type="button">Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              class="form-control"
+              formControlName="name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="imagePath">Image Path</label>
+            <input
+              id="imagePath"
+              type="text"
+              class="form-control"
+              formControlName="imagePath">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <img src="" alt="" class="img-responsive">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              rows="6"
+              id="description"
+              class="form-control"
+              formControlName="description"></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
