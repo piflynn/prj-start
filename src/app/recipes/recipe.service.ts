@@ -1,5 +1,4 @@
 import {
-  EventEmitter,
   Injectable
 } from '@angular/core';
 
@@ -11,7 +10,6 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 @Injectable()
 
 export class RecipeService {
-  public recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe('chili', 'really good chili recipe', 'https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/recipe_photos/10828_smoked_chili.jpg',
@@ -33,6 +31,10 @@ export class RecipeService {
   getRecipes() {
     // return only a copy ... use slice()
     return this.recipes.slice();
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {

@@ -1,7 +1,32 @@
 button {
   border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px #333;
+  -moz-box-shadow: 0 2px 5px #333;
+  box-shadow: 0 2px 5px #333;
+}
+
+img {
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px #333;
+  -moz-box-shadow: 0 2px 5px #333;
+  box-shadow: 0 2px 5px #333;
 }
 
 p{
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+li>a:hover {
+  background-color: #EEFC57;
+}
+
+.list-group {
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px #333;
+  -moz-box-shadow: 0 2px 5px #333;
+  box-shadow: 0 2px 5px #333;
+}
+
+.list-group-item {
+  border-radius: 0;
 }

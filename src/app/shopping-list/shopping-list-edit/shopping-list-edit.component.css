@@ -1,5 +1,12 @@
-button {
+button, input {
   border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px #333;
+  -moz-box-shadow: 0 2px 5px #333;
+  box-shadow: 0 2px 5px #333;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid #D9534F;
 }
 
 label {

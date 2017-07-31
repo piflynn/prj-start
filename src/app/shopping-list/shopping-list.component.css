@@ -1,6 +1,16 @@
-.row {
-  padding: 2rem;
-  background-color: #777;
+.list-group {
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px #333;
+  -moz-box-shadow: 0 2px 5px #333;
   box-shadow: 0 2px 5px #333;
 }
 
+.list-group-item {
+  border-radius: 0;
+}
+
+.row {
+  padding: 2rem;
+  background-color: #C2C1C2;
+  box-shadow: 0 2px 5px #333;
+}

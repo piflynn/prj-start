@@ -4,7 +4,3 @@ nav {
   -moz-box-shadow: 0 5px 10px #333;
   box-shadow: 0 5px 10px #333;
 }
-
-li:hover, a.navbar-brand:hover{
-  background-color: tomato;
-}
