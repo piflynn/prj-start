@@ -6,10 +6,13 @@ import { Ingredient } from '../shared/ingredient.model';
 import { Recipe } from './recipe.model';
 
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import {Subject} from 'rxjs/Subject';
 
 @Injectable()
 
 export class RecipeService {
+  recipesChanged = new Subject<Recipe[]>();
+
 
   private recipes: Recipe[] = [
     new Recipe('chili', 'really good chili recipe', 'https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/recipe_photos/10828_smoked_chili.jpg',
@@ -39,6 +42,21 @@ export class RecipeService {
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
+  }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  removeRecipe(index: number) {
+    this.recipes.splice(index, 1);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  updateRecipe(index: number, newRecipe: Recipe) {
+    this.recipes[index] = newRecipe;
+    this.recipesChanged.next(this.recipes.slice());
   }
 
 
